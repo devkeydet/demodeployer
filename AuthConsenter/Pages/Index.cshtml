@@ -1,0 +1,52 @@
+﻿@page
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Config
+<html>
+<head>
+    <title>Auth Consenter</title>
+    <!-- Helper web page that grants consent for the Azure Function code to use the users credentials...because our scenario required deploying to different tenants can explain more if interested -->
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.16/js/adal.min.js"></script>
+    <script>
+        var forceUserLogin = true;
+        var ADAL = new AuthenticationContext({
+
+            clientId: '@Config["AuthTesterClientId"]', //This is your client ID
+            extraQueryParameter: "login_hint=@Request.Query["login_hint"]"  //login
+        });
+
+        function onLoad() {
+            var hash = window.location.hash;
+            var isCallback = ADAL.isCallback(hash);
+            var user = ADAL.getCachedUser();
+            if (user == null)
+            {
+                if (isCallback)
+                {
+                    ADAL.handleWindowCallback(hash);
+                }
+                else
+                {
+                    ADAL.login();
+                }
+            }
+            else
+            {
+                showWelcomeMessage(user);
+            }
+        }
+
+        function showWelcomeMessage(user) {
+            var email = user.userName;
+            var divWelcome = document.getElementById('WelcomeMessage');
+            divWelcome.innerHTML = "You have successfully authorized <b>" +  email +
+                "</b>.  Please verify this is the account you plan on using to deploy to Dynamics 365.  " +
+                "If not, please log out and log in with the right account to authorize.  " +
+                "If this is the account you intended to authorize, you can return to the PowerApp.";
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <p id="WelcomeMessage"></p>
+    <p><a href="javascript:ADAL.logOut()">Log Out</a></p>
+</body>
+</html>

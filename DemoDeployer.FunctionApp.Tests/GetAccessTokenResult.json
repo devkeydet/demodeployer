@@ -1,0 +1,12 @@
+﻿{
+  "token_type": "Bearer",
+  "scope": "user_impersonation",
+  "expires_in": "3599",
+  "ext_expires_in": "0",
+  "expires_on": "1521249533",
+  "not_before": "1521245633",
+  "resource": "https://admin.services.crm.dynamics.com/",
+  "access_token": "anything",
+  "refresh_token": "",
+  "id_token": ""
+}
