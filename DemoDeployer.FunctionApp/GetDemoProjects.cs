@@ -59,9 +59,9 @@ namespace DemoDeployer.FunctionApp
             // TODO: Build this list in a non hard coded way
             var deployableDemos = new List<DeployableDemo>
             {
-                ConfigureDeployableDemo("a177c656-0e57-4173-bfd2-b0c4f9883b21", "8.2", false),  // Treasury Audit Case Management
+                ConfigureDeployableDemo("a177c656-0e57-4173-bfd2-b0c4f9883b21", "8.2", false),  // Audit Case Management
                 ConfigureDeployableDemo("1ba2fb0e-cca7-46c3-b926-7828f224a406", "8.2", false),  // Azure Service Bus and Functions
-                ConfigureDeployableDemo("8c561419-0b42-4c8d-83cd-57a1ecf70550", "9.0", true),   // Engagement (ICE))
+                ConfigureDeployableDemo("8c561419-0b42-4c8d-83cd-57a1ecf70550", "9.0", true),   // Engagement
                 ConfigureDeployableDemo("7f588715-6223-4890-9cbc-22bd9f2b6dbd", "9.0", true),   // Correspondence Management
                 ConfigureDeployableDemo("a4ce3c38-b6ac-4487-a442-a4cbbd4a5f66", "9.0", false)    // Request Management
             };
