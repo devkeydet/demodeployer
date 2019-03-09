@@ -1,0 +1,78 @@
+﻿[
+  {
+    "Source": 2,
+    "Id": 3,
+    "Revision": 51,
+    "Name": "DEMO_DEPLOYER",
+    "Description": null,
+    "CreatedBy": {
+      "DisplayName": "Marc Schweigert",
+      "Url": "https://pbb82efdd-cd10-48f1-a2b2-3d1a1ae5acd2.codex.ms/vssps/_apis/Identities/8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "id": "8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "uniqueName": "someone@yourtenant.onmicrosoft.com",
+      "imageUrl": "https://dyn365fedstu.visualstudio.com/_api/_common/identityImage?id=8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "Descriptor": "aad.ZGU2ZGU4YTgtOThiNS03ODEyLWJlY2YtNjgyOTI4MTRmZDE0"
+    },
+    "CreatedOn": "2018-02-13T15:40:06.99Z",
+    "ModifiedBy": {
+      "DisplayName": "Marc Schweigert",
+      "Url": "https://pbb82efdd-cd10-48f1-a2b2-3d1a1ae5acd2.codex.ms/vssps/_apis/Identities/8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "id": "8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "uniqueName": "someone@yourtenant.onmicrosoft.com",
+      "imageUrl": "https://dyn365fedstu.visualstudio.com/_api/_common/identityImage?id=8f6eb500-fd5c-43d5-a659-d7da7cfd8fba",
+      "Descriptor": "aad.ZGU2ZGU4YTgtOThiNS03ODEyLWJlY2YtNjgyOTI4MTRmZDE0"
+    },
+    "ModifiedOn": "2018-03-15T14:34:01.34Z",
+    "IsDeleted": false,
+    "Path": "\\",
+    "Variables": {},
+    "VariableGroups": null,
+    "Artifacts": [
+      {
+        "SourceId": "a177c656-0e57-4173-bfd2-b0c4f9883b21:10",
+        "Type": "Build",
+        "Alias": "Master Build",
+        "DefinitionReference": {
+          "artifactSourceDefinitionUrl": {
+            "Id": "https://dyn365fedstu.visualstudio.com/_permalink/_build/index?collectionId=43cad618-c1a6-4a83-87e1-013a010097c0&projectId=a177c656-0e57-4173-bfd2-b0c4f9883b21&definitionId=10",
+            "Name": ""
+          },
+          "defaultVersionBranch": {
+            "Id": "",
+            "Name": ""
+          },
+          "defaultVersionSpecific": {
+            "Id": "223",
+            "Name": "20180226.3"
+          },
+          "defaultVersionTags": {
+            "Id": "",
+            "Name": ""
+          },
+          "defaultVersionType": {
+            "Id": "specificVersionType",
+            "Name": "Specific version"
+          },
+          "definition": {
+            "Id": "10",
+            "Name": "Master Build"
+          },
+          "project": {
+            "Id": "a177c656-0e57-4173-bfd2-b0c4f9883b21",
+            "Name": "Treasury Audit Case Management"
+          }
+        },
+        "IsPrimary": true
+      }
+    ],
+    "Triggers": [],
+    "ReleaseNameFormat": "DD - $(Build.BuildNumber)-$(Date:MMddyy)-$(Date:hhmmss)",
+    "Url": "https://dyn365fedstu.vsrm.visualstudio.com/a177c656-0e57-4173-bfd2-b0c4f9883b21/_apis/Release/definitions/3",
+    "_links": {
+      "self": { "Href": "https://dyn365fedstu.vsrm.visualstudio.com/a177c656-0e57-4173-bfd2-b0c4f9883b21/_apis/Release/definitions/3" },
+      "web": { "Href": "https://dyn365fedstu.visualstudio.com/a177c656-0e57-4173-bfd2-b0c4f9883b21/_release?definitionId=3" }
+    },
+    "Tags": [],
+    "Properties": {}
+  }
+]

@@ -1,0 +1,337 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "DemoDeployerFunctions",
+    "description": "DemoDeployerFunctions"
+  },
+  "host": "fedbizapps-demodeployer-test.azurewebsites.net",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/TestDynDomain": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "description": "status",
+                  "x-ms-summary": "status"
+                }
+              }
+            }
+          }
+        },
+        "summary": "TestDynDomain",
+        "description": "TestDynDomain",
+        "operationId": "TestDynDomain",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "instance": {
+                  "type": "string",
+                  "description": "instance",
+                  "x-ms-summary": "instance"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/GetDemoProjects": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "description": "id",
+                    "x-ms-summary": "id"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "name",
+                    "x-ms-summary": "name"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "description",
+                    "x-ms-summary": "description"
+                  },
+                  "url": {
+                    "type": "string",
+                    "description": "url",
+                    "x-ms-summary": "url"
+                  },
+                  "state": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "state",
+                    "x-ms-summary": "state"
+                  },
+                  "revision": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "revision",
+                    "x-ms-summary": "revision"
+                  },
+                  "visibility": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "visibility",
+                    "x-ms-summary": "visibility"
+                  },
+                  "minimumInstanceVersion": {
+                    "type": "string",
+                    "description": "minimumInstanceVersion",
+                    "x-ms-summary": "minimumInstanceVersion"
+                  },
+                  "overviewDoc": {
+                    "type": "string",
+                    "description": "overviewDoc",
+                    "x-ms-summary": "overviewDoc"
+                  },
+                  "prereqsDoc": {
+                    "type": "string",
+                    "description": "prereqsDoc",
+                    "x-ms-summary": "prereqsDoc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "GetDemoProjects",
+        "description": "GetDemoProjects",
+        "operationId": "GetDemoProjects",
+        "parameters": []
+      }
+    },
+    "/api/TestCredentials": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "description": "status",
+                  "x-ms-summary": "status"
+                }
+              }
+            }
+          }
+        },
+        "summary": "TestCredentials",
+        "description": "TestCredentials",
+        "operationId": "TestCredentials",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "description": "username",
+                  "x-ms-summary": "username"
+                },
+                "password": {
+                  "type": "string",
+                  "description": "password",
+                  "x-ms-summary": "password"
+                },
+                "instance": {
+                  "type": "string",
+                  "description": "instance",
+                  "x-ms-summary": "instance"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/DeployDemo": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "description": "status",
+                  "x-ms-summary": "status"
+                }
+              }
+            }
+          }
+        },
+        "summary": "DeployDemo",
+        "description": "DeployDemo",
+        "operationId": "DeployDemo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id",
+                  "x-ms-summary": "id"
+                },
+                "instance": {
+                  "type": "string",
+                  "description": "instance",
+                  "x-ms-summary": "instance"
+                },
+                "username": {
+                  "type": "string",
+                  "description": "username",
+                  "x-ms-summary": "username"
+                },
+                "password": {
+                  "type": "string",
+                  "description": "password",
+                  "x-ms-summary": "password"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "email",
+                  "x-ms-summary": "email"
+                },
+                "resetInstance": {
+                  "type": "boolean",
+                  "description": "resetInstance",
+                  "x-ms-summary": "resetInstance"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/GetInstanceVersion": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "description": "version",
+                  "x-ms-summary": "version"
+                }
+              }
+            }
+          }
+        },
+        "summary": "GetInstanceVersion",
+        "description": "GetInstanceVersion",
+        "operationId": "GetInstanceVersion",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "description": "username",
+                  "x-ms-summary": "username"
+                },
+                "password": {
+                  "type": "string",
+                  "description": "password",
+                  "x-ms-summary": "password"
+                },
+                "instance": {
+                  "type": "string",
+                  "description": "instance",
+                  "x-ms-summary": "instance"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/api/GetConfig": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "authTesterUrl": {
+                  "type": "string",
+                  "description": "authTesterUrl",
+                  "x-ms-summary": "authTesterUrl"
+                },
+                "headerFillColor": {
+                  "type": "string",
+                  "description": "headerFillColor",
+                  "x-ms-summary": "headerFillColor"
+                }
+              }
+            }
+          }
+        },
+        "summary": "GetConfig",
+        "description": "GetConfig",
+        "operationId": "GetConfig",
+        "parameters": []
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize"
+    }
+  },
+  "security": [
+    {}
+  ],
+  "tags": []
+}
